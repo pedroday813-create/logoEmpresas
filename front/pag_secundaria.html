@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="secundaria.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="search-panel" aria-labelledby="page-title">
+            <div class="brand-mark">LF</div>
+            <p class="eyebrow">Logo.dev search</p>
+            <h1 id="page-title">Pesquisar logo de empresas</h1>
+            <p class="lead">Digite o nome de uma empresa para ver a logo e o nome pesquisado.</p>
+
+            <form class="search-form" id="company-form">
+                <label for="company-input">Nome da empresa</label>
+                <div class="input-row">
+                    <input
+                        id="company-input"
+                        type="search"
+                        autocomplete="off"
+                        placeholder="Ex: Shopify, Netflix, Nubank"
+                        autofocus
+                    >
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="result-panel" aria-live="polite">
+            <div class="logo-frame" id="logo-frame">
+                <img id="company-logo" alt="" hidden>
+                <span id="logo-placeholder">Digite uma empresa</span>
+            </div>
+            <div class="company-info">
+                <span>Resultado</span>
+                <h2 id="company-name">Nenhuma empresa pesquisada</h2>
+                <p id="result-status">A logo aparecerá aqui assim que você pesquisar.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script/app.js"></script>
+</body>
+</html>
